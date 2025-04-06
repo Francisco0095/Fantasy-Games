@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fantasy Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="short-cut icon" href="9c8d3d4e-2ba5-4d4e-9366-37f0439b5fb4-removebg-preview.png">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #111;
+      border-bottom: 2px solid #e11d48;
+      padding: 2rem;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+    header h1 {
+      color: #e11d48;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    header p {
+      color: #aaa;
+      margin-top: 0.5rem;
+    }
+    .section {
+      padding: 3rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      animation: slideUp 1.2s ease-in-out;
+    }
+    .text-block, .card {
+      transform: translateY(50px);
+      opacity: 0;
+      animation: fadeSlideIn 1s ease-out forwards;
+    }
+    .text-block {
+      flex: 1 1 300px;
+      max-width: 600px;
+      animation-delay: 0.3s;
+    }
+    .card {
+      max-width: 500px;
+      animation-delay: 0.6s;
+    }
+    .text-block h2 {
+      color: #f43f5e;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .text-block p {
+      color: #ccc;
+      margin-bottom: 1.5rem;
+    }
+    .button {
+      background-color: #e11d48;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    .button:hover {
+      background-color: #be123c;
+      transform: scale(1.05);
+    }
+    .card {
+      background-color: #1c1c1c;
+      border: 1px solid #333;
+      border-radius: 1rem;
+      padding: 2rem;
+    }
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .card p {
+      color: #bbb;
+      margin-bottom: 1.5rem;
+    }
+    .button-outline {
+      background: none;
+      color: #e11d48;
+      border: 2px solid #e11d48;
+      padding: 0.5rem 1.25rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s, transform 0.3s;
+    }
+    .button-outline:hover {
+      background-color: #e11d48;
+      color: #fff;
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      border-top: 1px solid #222;
+      padding: 2rem;
+      margin-top: 3rem;
+      color: #777;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .socials a {
+      color: #999;
+      margin: 0 1rem;
+      font-size: 1.2rem;
+      transition: color 0.3s, transform 0.3s;
+    }
+    .socials a:hover {
+      color: #fff;
+      transform: scale(1.2);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { transform: translateY(100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeSlideIn {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fantasy Games</h1>
+    <p>Donde la oscuridad cobra vida.</p>
+  </header>
+
+  <section class="section">
+    <div class="text-block">
+      <h2>Nuestro enfoque</h2>
+      <p>En Fantasy Games creamos videojuegos que combinan lo mágico con lo oscuro, lo inocente con lo perturbador. Cada juego es una experiencia única pensada para dejarte marcado.</p>
+      <button class="button" onclick="document.getElementById('juegos').scrollIntoView({ behavior: 'smooth' });">Conocé nuestros juegos</button>
+    </div>
+
+    <div class="card">
+      <h3>My Forest Friend</h3>
+      <p>Una historia que comienza como un cuento infantil... y termina como tu peor pesadilla. Sumergite en este mundo animado y oscuro mientras buscás a tu madre, guiado por una voz misteriosa y perseguido por algo que no podés entender.</p>
+      <button class="button-outline">Ver más</button>
+    </div>
+  </section>
+
+  <section class="section" id="juegos">
+    <div class="card">
+      <h3>My Forest Friend</h3>
+      <p>Una experiencia que comienza entre árboles encantados, pero se transforma en una pesadilla de la que no podrás escapar. Nuestro primer juego profesional.</p>
+      <button class="button-outline">Más información</button>
+    </div>
+
+    <div class="card">
+      <h3>Proyecto Secreto</h3>
+      <p>Un título aún no anunciado. Estamos trabajando en una nueva aventura oscura llena de suspenso y emoción. Muy pronto sabrás más.</p>
+      <button class="button-outline">Muy pronto</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="socials">
+      <a href="https://github.com/francocoppa" aria-label="Github"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/fantasygames.oficial/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Web"><i class="fas fa-globe"></i></a>
+    </div>
+    <p>&copy; 2025 Fantasy Games. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
